@@ -1,0 +1,297 @@
+<!-- begin::Header Nav -->
+<ul class="menu-nav" [ngClass]="ulCSSClasses">
+  <!-- begin::1 Level -->
+  <li class="menu-item menu-item-rel" routerLinkActive="menu-item-active">
+    <a class="menu-link" routerLink="/ingredients/list" routerLinkActive="active">
+      <span class="menu-text" translate="MENU.DASHBOARD"></span>
+      <ng-container *ngIf="rootArrowEnabled">
+        <i class="menu-arrow"></i>
+      </ng-container>
+    </a>
+  </li>
+  <!-- end::1 Level -->
+
+
+
+  <!-- Classic submenu -->
+  <!-- begin::1 Level -->
+  <li
+    class="menu-item menu-item-submenu menu-item-rel"
+    routerLinkActive="menu-item-active"
+    [attr.data-menu-toggle]="headerMenuDesktopToggle"
+    aria-haspopup="true"
+  >
+    <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+      <ul class="menu-subnav">
+        <!-- begin::2 Level -->
+        <li
+          class="menu-item menu-item-submenu"
+          routerLinkActive="menu-item-active"
+          data-menu-toggle="hover"
+          aria-haspopup="true"
+        >
+          <a
+            class="menu-link menu-toggle"
+            routerLinkActive="active"
+            href="/ingredients"
+          >
+            <span class="menu-text"> Ingredients </span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+            <ul class="menu-subnav">
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/ecommerce/customers"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Customers</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/ecommerce/products"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Products</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+            </ul>
+          </div>
+        </li>
+        <!-- end::2 Level -->
+
+        <!-- begin::2 Level -->
+        <li
+          class="menu-item menu-item-submenu"
+          routerLinkActive="menu-item-active"
+          data-menu-toggle="hover"
+          aria-haspopup="true"
+        >
+          <a
+            class="menu-link menu-toggle"
+            routerLinkActive="active"
+            href="/user-management"
+          >
+            <span class="menu-text"> User Management </span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+            <ul class="menu-subnav">
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/user-management/users"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Users</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/user-management/roles"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Roles</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+            </ul>
+          </div>
+        </li>
+        <!-- end::2 Level -->
+
+        <!-- begin::2 Level -->
+        <li
+          class="menu-item menu-item-submenu"
+          routerLinkActive="menu-item-active"
+          data-menu-toggle="hover"
+          aria-haspopup="true"
+        >
+          <a
+            routerLinkActive="active"
+            class="menu-link menu-toggle"
+            href="/error"
+          >
+            <span class="menu-text"> Error Pages </span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+            <ul class="menu-subnav">
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/error/error-1"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Error 1</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/error/error-2"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Error 2</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/error/error-3"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Error 3</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/error/error-4"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Error 4</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/error/error-5"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Error 5</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/error/error-6"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Error 6</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+            </ul>
+          </div>
+        </li>
+        <!-- end::2 Level -->
+
+        <!-- Wizards -->
+        <!-- begin::2 Level -->
+        <li
+          class="menu-item menu-item-submenu"
+          routerLinkActive="menu-item-active"
+          data-menu-toggle="hover"
+          aria-haspopup="true"
+        >
+          <a
+            routerLinkActive="active"
+            class="menu-link menu-toggle"
+            href="/wizards"
+          >
+            <span class="menu-text"> Wizards </span>
+            <i class="menu-arrow"></i>
+          </a>
+          <div class="menu-submenu menu-submenu-classic menu-submenu-right">
+            <ul class="menu-subnav">
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/wizards/wizard-1"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Wizard 1</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/wizards/wizard-2"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Wizard 2</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/wizards/wizard-3"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Wizard 3</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+
+              <!-- begin::3 Level -->
+              <li class="menu-item" routerLinkActive="menu-item-active">
+                <a
+                  class="menu-link"
+                  routerLink="/wizards/wizard-4"
+                  routerLinkActive="active"
+                >
+                  <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                  <span class="menu-text">Wizard 4</span>
+                </a>
+              </li>
+              <!-- end::3 Level -->
+            </ul>
+          </div>
+        </li>
+        <!-- end::2 Level -->
+      </ul>
+    </div>
+  </li>
+  <!-- end::1 Level -->
+</ul>
+<!-- end::Header Nav -->
