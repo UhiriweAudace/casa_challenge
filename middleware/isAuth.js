@@ -15,10 +15,7 @@ import {AppConfig} from "../config/index.js";
     req.user = decodedToken;
     return next();
   } catch (error) {
-    return res.status(400).send({
-      status: 400,
-      message: 'You provided the invalid token!',
-    });
+    return res.status(400).send({  status: 400,  message: 'You provided the invalid token!',});
   }
 }
 

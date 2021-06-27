@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { Product } from '../_models/product.model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable, of, pipe } from 'rxjs';
 
 @Injectable({
@@ -43,31 +43,31 @@ export class ProductsService {
       return `${url}?apiKey=${environment.SEARCH_API_KEY}`
   }
     // CREATE
-    create(item: FormData): Observable<Product> {
-        return this.http.post<Product>(`${this.INGREDIENT_API_URL}/create`, item)
+    create(item: FormData, headers:HttpHeaders): Observable<Product> {
+        return this.http.post<Product>(`${this.INGREDIENT_API_URL}/create`, item,{headers})
       }
     
       // GET INGREDIENT INFORMATION
-      getItemById(id: string): Observable<Product> {
+      getItemById(id: string,  headers:HttpHeaders): Observable<Product> {
         const url = `${this.INGREDIENT_API_URL}/${id}`;
-        return this.http.get<Product>(url);
+        return this.http.get<Product>(url,{headers});
       }
     
       // UPDATE
-      update(itemId:string, formData:FormData): Observable<any> {
+      update(itemId:string, formData:FormData,  headers:HttpHeaders): Observable<any> {
         const url = `${this.INGREDIENT_API_URL}/${itemId}`;
-        return this.http.put(url, formData)
+        return this.http.put(url, formData,{headers})
       }
     
       // DELETE
-      delete(id: any): Observable<any> {
+      delete(id: any, headers:HttpHeaders): Observable<any> {
         const url = `${this.INGREDIENT_API_URL}/${id}`;
-        return this.http.delete(url);
+        return this.http.delete(url,{headers});
       }
     
       // GET ALL INGREDIENTS
-      fetch():Observable<any> {
-        return this.http.get(`http://localhost:3000/api/ingredients`)
+      fetch(headers:HttpHeaders):Observable<any> {
+        return this.http.get(`http://localhost:3000/api/ingredients`,{headers})
     //     .pipe().subscribe((ingredients:Product[])=>{
     //         console.log("--- Ingredients --->", ingredients)
     //     this._items$.next(ingredients);

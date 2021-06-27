@@ -8,4 +8,6 @@ export class AuthModel {
     this.refreshToken = auth.refreshToken;
     this.expiresIn = auth.expiresIn;
   }
+  
+  UserCredentials:{ email: string, password: string }
 }

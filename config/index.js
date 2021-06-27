@@ -5,5 +5,5 @@ export const AppConfig = {
     NodeEnv: process.env.NODE_ENV,
     AppPort: process.env.APP_PORT || 3000,
     tokenSecretOrKey: process.env.TOKEN_SECRET_KEY,
-    saltOrRounds: process.env.SALT_ROUNDS || 10,
+    saltOrRounds: Number(process.env.SALT_ROUNDS) || 10,
 };
